@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="PersonNameEO"
+  Version="11.1.1.64.93"
+  InheritPersonalization="true"
+  DBObjectType="table"
+  DBObjectName="DEMO_PERSON_NAME"
+  AliasName="PersonNameEO"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <AttrArray Name="_publishEvents"/>
+  </DesignTime>
+  <Attribute
+    Name="PersonNameId"
+    IsNotNull="true"
+    Precision="18"
+    Scale="2"
+    ColumnName="PERSON_NAME_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="DEMO_PERSON_NAME"
+    PrimaryKey="true"
+    IsUpdateable="false">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <TransientExpression><![CDATA[(new oracle.jbo.server.SequenceImpl("DEMOHRM_PRIMARY_SEQUENCE", adf.object.getDBTransaction())).getSequenceNumber()]]></TransientExpression>
+  </Attribute>
+  <Attribute
+    Name="PersonId"
+    IsNotNull="true"
+    Precision="18"
+    Scale="2"
+    ColumnName="PERSON_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="DEMO_PERSON_NAME">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="FirstName"
+    IsNotNull="true"
+    Precision="200"
+    ColumnName="FIRST_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DEMO_PERSON_NAME">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="MiddleName"
+    Precision="200"
+    ColumnName="MIDDLE_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DEMO_PERSON_NAME">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastName"
+    IsNotNull="true"
+    Precision="200"
+    ColumnName="LAST_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DEMO_PERSON_NAME">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Prefix"
+    Precision="3"
+    ColumnName="PREFIX"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DEMO_PERSON_NAME">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdateDate"
+    IsNotNull="true"
+    ColumnName="LAST_UPDATE_DATE"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="DEMO_PERSON_NAME">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="11"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdatedBy"
+    IsNotNull="true"
+    Precision="64"
+    ColumnName="LAST_UPDATED_BY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DEMO_PERSON_NAME">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="64"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdateLogin"
+    IsNotNull="true"
+    Precision="32"
+    ColumnName="LAST_UPDATE_LOGIN"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DEMO_PERSON_NAME">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="32"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreatedBy"
+    IsNotNull="true"
+    Precision="64"
+    ColumnName="CREATED_BY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DEMO_PERSON_NAME">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="64"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreationDate"
+    IsNotNull="true"
+    ColumnName="CREATION_DATE"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="DEMO_PERSON_NAME">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="11"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ObjectVersionNumber"
+    IsNotNull="true"
+    Precision="9"
+    Scale="0"
+    ColumnName="OBJECT_VERSION_NUMBER"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="DEMO_PERSON_NAME">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="SysC002330691">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330691"/>
+      <Attr Name="_checkCondition" Value='"PERSON_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.PersonNameEO.PersonId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330692">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330692"/>
+      <Attr Name="_checkCondition" Value='"FIRST_NAME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.PersonNameEO.FirstName"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330693">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330693"/>
+      <Attr Name="_checkCondition" Value='"LAST_NAME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.PersonNameEO.LastName"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330694">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330694"/>
+      <Attr Name="_checkCondition" Value='"LAST_UPDATE_DATE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.PersonNameEO.LastUpdateDate"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330695">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330695"/>
+      <Attr Name="_checkCondition" Value='"LAST_UPDATED_BY" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.PersonNameEO.LastUpdatedBy"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330696">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330696"/>
+      <Attr Name="_checkCondition" Value='"LAST_UPDATE_LOGIN" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.PersonNameEO.LastUpdateLogin"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330697">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330697"/>
+      <Attr Name="_checkCondition" Value='"CREATED_BY" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.PersonNameEO.CreatedBy"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330698">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330698"/>
+      <Attr Name="_checkCondition" Value='"CREATION_DATE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.PersonNameEO.CreationDate"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330699">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330699"/>
+      <Attr Name="_checkCondition" Value='"OBJECT_VERSION_NUMBER" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.PersonNameEO.ObjectVersionNumber"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330700"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330700"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.PersonNameEO.PersonNameId"/>
+    </AttrArray>
+  </Key>
+</Entity>

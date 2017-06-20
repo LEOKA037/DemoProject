@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="DepartmentEO"
+  Version="11.1.1.64.93"
+  InheritPersonalization="true"
+  DBObjectType="table"
+  DBObjectName="DEMO_DEPARTMENT"
+  AliasName="DepartmentEO"
+  BindingStyle="OracleName"
+  UseGlueCode="false">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <AttrArray Name="_publishEvents"/>
+  </DesignTime>
+  <Attribute
+    Name="DepartmentId"
+    IsNotNull="true"
+    Precision="18"
+    Scale="2"
+    ColumnName="DEPARTMENT_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="DEMO_DEPARTMENT"
+    PrimaryKey="true"
+    IsUpdateable="false">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+    <TransientExpression><![CDATA[(new oracle.jbo.server.SequenceImpl("DEMOHRM_PRIMARY_SEQUENCE", adf.object.getDBTransaction())).getSequenceNumber()]]></TransientExpression>
+  </Attribute>
+  <Attribute
+    Name="LocationId"
+    IsNotNull="true"
+    Precision="18"
+    Scale="2"
+    ColumnName="LOCATION_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="DEMO_DEPARTMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DeptManagerId"
+    IsNotNull="true"
+    Precision="18"
+    Scale="2"
+    ColumnName="DEPT_MANAGER_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="DEMO_DEPARTMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DepartmentName"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="200"
+    ColumnName="DEPARTMENT_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DEMO_DEPARTMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DepartmentDesc"
+    Precision="200"
+    ColumnName="DEPARTMENT_DESC"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DEMO_DEPARTMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Status"
+    IsNotNull="true"
+    Precision="200"
+    ColumnName="STATUS"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DEMO_DEPARTMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdateDate"
+    IsNotNull="true"
+    ColumnName="LAST_UPDATE_DATE"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="DEMO_DEPARTMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="11"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdatedBy"
+    IsNotNull="true"
+    Precision="64"
+    ColumnName="LAST_UPDATED_BY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DEMO_DEPARTMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="64"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdateLogin"
+    IsNotNull="true"
+    Precision="32"
+    ColumnName="LAST_UPDATE_LOGIN"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DEMO_DEPARTMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="32"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreatedBy"
+    IsNotNull="true"
+    Precision="64"
+    ColumnName="CREATED_BY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DEMO_DEPARTMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="64"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CreationDate"
+    IsNotNull="true"
+    ColumnName="CREATION_DATE"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="DEMO_DEPARTMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="11"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ObjectVersionNumber"
+    IsNotNull="true"
+    Precision="9"
+    Scale="0"
+    ColumnName="OBJECT_VERSION_NUMBER"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="DEMO_DEPARTMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="SysC002330721">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330721"/>
+      <Attr Name="_checkCondition" Value='"LOCATION_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.DepartmentEO.LocationId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330722">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330722"/>
+      <Attr Name="_checkCondition" Value='"DEPT_MANAGER_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.DepartmentEO.DeptManagerId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330723">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330723"/>
+      <Attr Name="_checkCondition" Value='"DEPARTMENT_NAME" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.DepartmentEO.DepartmentName"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330724">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330724"/>
+      <Attr Name="_checkCondition" Value='"STATUS" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.DepartmentEO.Status"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330725">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330725"/>
+      <Attr Name="_checkCondition" Value='"LAST_UPDATE_DATE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.DepartmentEO.LastUpdateDate"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330726">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330726"/>
+      <Attr Name="_checkCondition" Value='"LAST_UPDATED_BY" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.DepartmentEO.LastUpdatedBy"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330727">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330727"/>
+      <Attr Name="_checkCondition" Value='"LAST_UPDATE_LOGIN" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.DepartmentEO.LastUpdateLogin"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330728">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330728"/>
+      <Attr Name="_checkCondition" Value='"CREATED_BY" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.DepartmentEO.CreatedBy"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330729">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330729"/>
+      <Attr Name="_checkCondition" Value='"CREATION_DATE" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.DepartmentEO.CreationDate"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330730">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330730"/>
+      <Attr Name="_checkCondition" Value='"OBJECT_VERSION_NUMBER" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.DepartmentEO.ObjectVersionNumber"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330731"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C002330731"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.DepartmentEO.DepartmentId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC002330732">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="SYS_C002330732"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.DepartmentEO.DepartmentName"/>
+    </AttrArray>
+  </Key>
+</Entity>
