@@ -18,6 +18,4 @@ Vist for more info: [leo.ka](https://leoka1993.wixsite.com/leoka)
 - Instagram : [Leo__037](https://instagram.com/leo____037)
 - Facebook : [Leo KA](http://www.facebook.com/LEO.K.A.037)
 
->Copyright: Not claiming copyright for images used in posters. All the images are used only for illustration purposes only.
-
 ### © 2017 Leo K A All Rights Reserved
